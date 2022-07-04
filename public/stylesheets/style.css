@@ -3,10 +3,66 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+input[type=text], select {
+  width: 30%;
+  padding: 1rem;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+}
+
+input[type=password], select {
+  width: 30%;
+  padding: 1rem;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
 a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+.inputfield {
+  padding: 1rem;
+  width: 20%;
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  width: 30%;
+  margin-top: 2rem;
+}
+
+.btn-submit:hover {
+  cursor: pointer;
 }
