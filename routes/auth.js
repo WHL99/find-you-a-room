@@ -10,7 +10,7 @@ router.get('/signup', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
-    const { email, password } = req.body
+    const { email, firstName, lastName, birthday, gender, phoneNumber, password } = req.body
     if (password.length < 4) {
         res.render('signup', { message: 'Your password needs to be min 4 chars' })
         return
