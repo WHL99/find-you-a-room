@@ -5,12 +5,18 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      unique: true,
+      required: true,
+      firstName: String,
+      lastName: String,
+      birthday: Date,
+      sex: {type: String, enum: ['male', 'female', 'other']},
+      email: String,
+      phoneNumber: Number,
     },
     password: String,
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
   }
 );
