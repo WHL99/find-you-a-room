@@ -17,19 +17,26 @@ router.post("/signup", (req, res, next) => {
     gender,
     phoneNumber,
     password,
+    checkPassword
   } = req.body;
   if (password.length < 4) {
-    res.render("signup", { message: "Your password needs to be min 4 chars" });
+    res.render("signup", { errorMessage: "Your password needs to be min 4 chars" });
     return;
   }
   if (email.length === 0) {
-    res.render("signup", { message: "Your email cannot be empty" });
+    res.render("signup", { errorMessage: "Your email cannot be empty" });
+    return;
+  }
+  if(password !== checkPassword){
+    res.render("signup", { errorMessage: "Your passwords are not match!" });
     return;
   }
 
+
+
   User.findOne({ email: email }).then((userFromDB) => {
     if (userFromDB !== null) {
-      res.render("signup", { message: "Email is already taken" });
+      res.render("signup", { errorMessage: "Email is already taken" });
     } else {
       const salt = bcryptjs.genSaltSync();
       const hash = bcryptjs.hashSync(password, salt);
