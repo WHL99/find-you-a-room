@@ -27,7 +27,7 @@ router.post('/signup', (req, res, next) => {
             } else {
                 const salt = bcrypt.genSaltSync()
                 const hash = bcrypt.hashSync(password, salt)
-                User.create({ email, password: hash })
+                User.create({ email, firstName, lastName, birthday, gender, phoneNumber, password: hash })
                     .then(createdUser => {
                         console.log(createdUser)
                         res.redirect('/login')
@@ -35,9 +35,44 @@ router.post('/signup', (req, res, next) => {
                     .catch(err => next(err))
             }
         })
+
 });
 
 
+
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+
+router.post('/login', (req, res, next) => {
+
+    const { email, password } = req.body
+
+    console.log(email)
+
+    if (email === '' || password === '') {
+        res.render('login', {
+            errorMessage: 'Please enter both, email and password to login.'
+        })
+        return
+    }
+
+    User.findOne({ email })
+
+        .then(user => {
+            if (!user) {
+                res.render('login', { errorMessage: 'Email is not registered. Try with other email.' });
+                return;
+            } else if (bcrypt.compareSync(password, user.passwordHash)) {
+                req.session.currentUser = user;
+                res.redirect('/rooms/index');
+            } else {
+                res.render('login', { errorMessage: 'Incorrect password.' });
+            }
+        })
+        .catch(error => next(error));
+
+});
 
 
 module.exports = router
