@@ -20,13 +20,16 @@ require("./config")(app);
 
 // default value for title local
 const capitalized = require("./utils/capitalized");
-const projectName = "模板";
+const projectName = "second-project";
 
 app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
-const index = require("./routes/index");
-app.use("/", index);
+const index = require('./routes/index');
+app.use('/', index);
+
+const authRouter = require('./routes/auth');
+app.use('/', authRouter); 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
