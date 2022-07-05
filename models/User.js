@@ -9,6 +9,7 @@ const userSchema = new Schema({
   city: String,
   phoneNumber: Number,
   passwordHash: String,
+  imageUrl: String,
 });
 
 const User = model("User", userSchema);

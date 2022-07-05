@@ -4,7 +4,7 @@
 
 <h1>Add Your Profile</h1>
 
-<form action="/add-profile" method="POST">
+<form action="/add-profile" method="POST" enctype="multipart/form-data">
 
 
     <label for="birthday">Birthday:</label>
@@ -24,6 +24,10 @@
     <label for="phoneNumber">Phone number:</label>
     <input type="tel" name="phoneNumber" placeholder="Phone number">
 
+    <label>Upload your profile photo: </label>
+    <input type="file" name="profile-image" class="form-control-file" />
+
+
 
     <button type="submit" class="btn-submit">Sign up</button>
     {{#if errorMessage}}
@@ -31,5 +35,3 @@
     {{/if}}
 </form>
 
-<h3>By filling the profile could let the landlord/tenant know more about you, but of course you could also <a
-        href="#">skip it</a> </h3>

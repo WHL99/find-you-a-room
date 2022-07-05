@@ -5,12 +5,12 @@ const bcryptjs = require("bcryptjs");
 
 router.get("/signup", (req, res, next) => {
   res.render("signup");
-//   res.render("add-profile");
-  console.log("signup get test");
+  // console.log("signup get test");
 });
 
 router.post("/signup", (req, res, next) => {
   const { email, firstName, lastName, password, checkPassword } = req.body;
+  console.log(req.body)
   if (password.length < 4) {
     res.render("signup", {
       errorMessage: "Your password needs to be min 4 chars",
@@ -71,10 +71,17 @@ router.post("/login", (req, res, next) => {
           errorMessage: "Email is not registered. Try with other email.",
         });
         return;
-      } else if (bcryptjs.compareSync(password, user.passwordHash)) {
+        //first time login, add profile
+      } else if (!user.city && bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
         res.redirect("/add-profile");
-      } else {
+      }
+      //if the profile is added, go to index
+      else if (user.city && bcryptjs.compareSync(password, user.passwordHash)) {
+        req.session.currentUser = user;
+        res.redirect("/rooms/index");
+      }
+      else {
         res.render("login", { errorMessage: "Incorrect password." });
       }
     })
