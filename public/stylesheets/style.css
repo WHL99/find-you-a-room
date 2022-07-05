@@ -1,50 +1,70 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.form-landing {
+  display: flex;
+}
+
+.form-container {
+  width: 35%;
+  margin: 0 auto;
+  background-color: #F5DEB3;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+form > * {
+  width: 100%;
+}
+
+.form-bg {
+  width: 65%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 input[type=text], select {
-  width: 400px;
   padding: 1rem;
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  border: none;
 }
 
 input[type=password], select {
-  width: 400px;
   padding: 1rem;
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-input[type=date], select {
-  width: 400px;
-  padding: 1rem;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=tel], select {
-  width: 400px;
-  padding: 1rem;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  border: none;
 }
 
 input[type=submit] {
-  width: 400px;
   background-color: #f3f3f3;
   color: white;
   padding: 14px 20px;
@@ -64,6 +84,10 @@ a {
   border-radius: 6px;
 }
 
+.signup-bg {
+  object-fit: contain;
+}
+
 .btn-submit {
   border-radius: 6px;
   background-color: red;
@@ -71,7 +95,6 @@ a {
   font-weight: bold;
   padding: 1rem;
   border: none;
-  width: 400px;
   margin-top: 1rem;
 }
 
