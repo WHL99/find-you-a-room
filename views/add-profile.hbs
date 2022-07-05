@@ -7,24 +7,22 @@
 <form action="/add-profile" method="GET">
 
 
-    <label for="birthday">Birthday: </label>
-    <br>
-    <input type="date" name="birthday">
+    <label for="birthday">Birthday:</label>
+    <input type="date" name="birthday" placeholder="Birthday">
 
-    <br>
-    {{!-- <label for="gender">gender:</label>
+    <label for="gender">Gender:</label>
     <select id="select-gender">
-        <option value="{{detailProfile._id}}">{{detailProfile.gender}}</option>
-        <option value="{{detailProfile._id}}">{{detailProfile.gender}}</option>
-        <option value="{{detailProfile._id}}">{{detailProfile.gender}}</option>
-    </select> --}}
+        <option value="male" name="gender">Male</option>
+        <option value="female" name="gender">Female</option>
+        <option value="other" name="gender">Other</option>
+        <option value="default" selected>Choose..</option>
+    </select>
 
-    <label for="city">City: </label>
+    <label for="city">City:</label>
     <input type="text" name="city">
 
-    <label for="phoneNumber">Phone number: </label>
-    <br>
-    <input type="tel" name="phoneNumber">
+    <label for="phoneNumber">Phone number:</label>
+    <input type="tel" name="phoneNumber" placeholder="Phone number">
 
 
     <button type="submit" class="btn-submit">Sign up</button>
