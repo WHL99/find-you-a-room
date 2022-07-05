@@ -1,10 +1,10 @@
 <h1>Login 🔑</h1>
 <form action="/login" method="POST">
     <label for="email">E-Mail: </label>
-    <input type="text" name="email">
+    <input type="text" name="email" placeholder="E-Mail">
     <label for="password">Password: </label>
-    <input type="password" name="password">
-    <button type="submit">Login</button>
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit" class="btn-submit">Login</button>
     {{#if errorMessage}}
     <p>{{errorMessage}}</p>
     {{/if}}
