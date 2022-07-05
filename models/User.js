@@ -5,16 +5,12 @@ const userSchema = new Schema({
   firstName: String,
   lastName: String,
   birthday: { type: Date },
-  gender: { type: String, enum: ['male', 'female', 'other'] },
+  gender: { type: String, enum: ["male", "female", "other"] },
+  city: String,
   phoneNumber: Number,
   passwordHash: String,
 });
 
-
-
 const User = model("User", userSchema);
 
 module.exports = User;
-
-
-
