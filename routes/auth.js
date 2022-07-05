@@ -4,7 +4,8 @@ const Room = require("../models/Room");
 const bcryptjs = require("bcryptjs");
 
 router.get("/signup", (req, res, next) => {
-  res.render("signup");
+ // res.render("signup");
+  res.render("add-profile");
   console.log("signup get test");
 });
 
