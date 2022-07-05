@@ -9,7 +9,9 @@ router.get("/", (req, res, next) => {
 
 /* create profile */
 router.get("/add-profile", (req, res, next) => {
+
   res.render("add-profile");
+  
 });
 
 router.post("/add-profile", (req, res, next) => {

@@ -4,8 +4,8 @@ const Room = require("../models/Room");
 const bcryptjs = require("bcryptjs");
 
 router.get("/signup", (req, res, next) => {
- // res.render("signup");
-  res.render("add-profile");
+  res.render("signup");
+//   res.render("add-profile");
   console.log("signup get test");
 });
 
@@ -73,7 +73,7 @@ router.post("/login", (req, res, next) => {
         return;
       } else if (bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
-        res.redirect("/rooms/index");
+        res.redirect("/add-profile");
       } else {
         res.render("login", { errorMessage: "Incorrect password." });
       }
