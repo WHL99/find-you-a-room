@@ -14,15 +14,19 @@ router.get("/add-profile", (req, res, next) => {
 
 router.post("/add-profile", (req, res, next) => {
   const { gender, phoneNumber, city, birthday } = req.body;
-  const userId = req.user._id;
-  User.create({ gender, phoneNumber, city, birthday, owner: userId })
-    .then((user) => {
-      console.log(user);
+  console.log(req.body)
+  //console.log(req.session.currentUser)
+  const userId = req.session.currentUser._id
+  User.findByIdAndUpdate(userId,{ gender, phoneNumber, city, birthday })
+    .then(() => {
       res.redirect("/rooms/index");
     })
     .catch((err) => {
       next(err);
     });
 });
+
+
+
 
 module.exports = router;

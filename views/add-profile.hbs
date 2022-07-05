@@ -4,17 +4,17 @@
 
 <h1>Add Your Profile</h1>
 
-<form action="/add-profile" method="GET">
+<form action="/add-profile" method="POST">
 
 
     <label for="birthday">Birthday:</label>
     <input type="date" name="birthday" placeholder="Birthday">
 
     <label for="gender">Gender:</label>
-    <select id="select-gender">
-        <option value="male" name="gender">Male</option>
-        <option value="female" name="gender">Female</option>
-        <option value="other" name="gender">Other</option>
+    <select name="gender" id="select-gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
         <option value="default" selected>Choose..</option>
     </select>
 
