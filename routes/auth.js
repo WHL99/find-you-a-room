@@ -9,30 +9,21 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  const {
-    email,
-    firstName,
-    lastName,
-    birthday,
-    gender,
-    phoneNumber,
-    password,
-    checkPassword
-  } = req.body;
+  const { email, firstName, lastName, password, checkPassword } = req.body;
   if (password.length < 4) {
-    res.render("signup", { errorMessage: "Your password needs to be min 4 chars" });
+    res.render("signup", {
+      errorMessage: "Your password needs to be min 4 chars",
+    });
     return;
   }
   if (email.length === 0) {
     res.render("signup", { errorMessage: "Your email cannot be empty" });
     return;
   }
-  if(password !== checkPassword){
+  if (password !== checkPassword) {
     res.render("signup", { errorMessage: "Your passwords are not match!" });
     return;
   }
-
-
 
   User.findOne({ email: email }).then((userFromDB) => {
     if (userFromDB !== null) {
@@ -44,9 +35,6 @@ router.post("/signup", (req, res, next) => {
         email,
         firstName,
         lastName,
-        birthday,
-        gender,
-        phoneNumber,
         passwordHash: hash,
       })
         .then((createdUser) => {
