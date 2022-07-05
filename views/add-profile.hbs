@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+</head>
+
+<h1>Add Your Profile</h1>
+
+<form action="/add-profile" method="GET">
+        <label for="email">E-Mail </label>
+        <input type="text" name="email" value="{{detailProfile.email}}" readonly>
+
+        <label for="firstname">First name: </label>
+        <input type="text" name="firstname" value="{{detailProfile.firstname}}">
+
+        <label for="lastname">Last name: </label>
+        <input type="text" name="lastname" value="{{detailProfile.lastname}}">
+
+        <label for="birthday">Birthday: </label>
+        <br>
+        <input type="date" name="birthday">
+
+        <br>
+        <label for="gender">gender:</label>
+        <select id="select-gender">
+            <option value="1">{{detailProfile.lastname}}</option>
+            <option value="2">{{detailProfile.lastname}}</option>
+            <option value="3">{{detailProfile.lastname}}</option>
+        </select>
+
+
+        <label for="phoneNumber">Phone number: </label>
+        <input type="text" name="phoneNumber">
+
+
+        <button type="submit" class="btn-submit">Sign up</button>
+        {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+        {{/if}}
+    </form>
+
+    <h3>By filling the profile could let the landlord/tenant know more about you, but of course you could also <a
+            href="#">skip it</a> </h3>
