@@ -4,7 +4,7 @@ body {
 }
 
 input[type=text], select {
-  width: 30%;
+  width: 400px;
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -14,7 +14,27 @@ input[type=text], select {
 }
 
 input[type=password], select {
-  width: 30%;
+  width: 400px;
+  padding: 1rem;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 400px;
+  padding: 1rem;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=tel], select {
+  width: 400px;
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -24,7 +44,7 @@ input[type=password], select {
 }
 
 input[type=submit] {
-  width: 50%;
+  width: 400px;
   background-color: #f3f3f3;
   color: white;
   padding: 14px 20px;
@@ -51,7 +71,7 @@ a {
   font-weight: bold;
   padding: 1rem;
   border: none;
-  width: 30%;
+  width: 400px;
   margin-top: 1rem;
 }
 

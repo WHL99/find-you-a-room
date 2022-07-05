@@ -1,14 +1,10 @@
-<head>
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
-</head>
-
 <h1>Add Your Profile</h1>
 
 <form action="/add-profile" method="POST">
 
 
     <label for="birthday">Birthday:</label>
-    <input type="date" name="birthday" placeholder="Birthday">
+    <input type="date" name="birthday">
 
     <label for="gender">Gender:</label>
     <select name="gender" id="select-gender">
@@ -19,17 +15,15 @@
     </select>
 
     <label for="city">City:</label>
-    <input type="text" name="city">
+    <input type="text" name="city" placeholder="City">
 
     <label for="phoneNumber">Phone number:</label>
     <input type="tel" name="phoneNumber" placeholder="Phone number">
 
 
-    <button type="submit" class="btn-submit">Sign up</button>
+    <button type="submit" class="btn-submit">Create profile</button>
     {{#if errorMessage}}
     <p>{{errorMessage}}</p>
     {{/if}}
 </form>
-
-<h3>By filling the profile could let the landlord/tenant know more about you, but of course you could also <a
-        href="#">skip it</a> </h3>
+<h3><a href="#">Fill out later</a></h3>
