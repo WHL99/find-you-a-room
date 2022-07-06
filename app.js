@@ -49,6 +49,9 @@ app.use("/", index);
 const authRouter = require("./routes/auth");
 app.use("/", authRouter);
 
+const roomRouter = require("./routes/rooms");
+app.use("/", roomRouter);
+
 app.use(express.static(__dirname + "/public"));
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
