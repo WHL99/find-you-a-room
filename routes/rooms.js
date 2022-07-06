@@ -3,6 +3,7 @@ const Room = require('../models/Room')
 const fileUploader = require('../config/cloudinary.config');
 
 
+
 router.get('/add-room', (req, res, next) => {
     res.render('rooms/add')
 });
@@ -24,17 +25,7 @@ router.get('/add-room', (req, res, next) => {
 
 //trying
 
-const cloudinaryImageUploadMethod = async file => {
-    return new Promise(resolve => {
-        fileUploader.upload(file, (err, res) => {
-            if (err) return res.status(500).send("upload image error")
-            resolve({
-                res: res.secure_url
-            })
-        }
-        )
-    })
-}
+
 
 
 router.post('/add-room', fileUploader.array("room-images", 3), async (req, res, next) => {
@@ -42,13 +33,7 @@ router.post('/add-room', fileUploader.array("room-images", 3), async (req, res, 
     const { title, rent, startDate, endDate, sqr, postalCode, street, district, description } = req.body
     const userId = req.session.currentUser._id
     const imageUrl = [];
-    // console.log('你好你好你你')
     const files = req.files;
-    for (const file of files) {
-        const { path } = file;
-        const newPath = await cloudinaryImageUploadMethod(path);
-        imageUrl.push(newPath);
-    }
     Room.create({ title, rent, startDate, endDate, sqr, postalCode, street, district, description, imageUrl, owner: userId })
         .then(room => {
             console.log(room)
@@ -65,6 +50,20 @@ router.get('/detail-room', (req, res, next) => {
     res.render('rooms/detail')
 });
 
+
+//
+// router.get('/detail-room', (req, res, next) => {
+
+//     const roomId = req.session.currentRoom._id
+//     console.log('這個是什麼？？？？')
+//       Room.findById(roomId)
+//           .then(roomsFromDB => {
+//               res.render('rooms/detail', { oneRoomData: roomsFromDB })
+//           })
+//           .catch(err => {
+//               next(err)
+//           })
+//   })
 
 
 module.exports = router;
