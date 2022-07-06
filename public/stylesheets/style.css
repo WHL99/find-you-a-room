@@ -8,10 +8,22 @@ body {
   display: flex;
 }
 
-.form-container {
+.form-container-signup {
   width: 35%;
   margin: 0 auto;
   background-color: #F5DEB3;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.form-container-login {
+  width: 35%;
+  margin: 0 auto;
+  background-color: #88CCF1;
   height: 100vh;
   display: flex;
   justify-content: center;
