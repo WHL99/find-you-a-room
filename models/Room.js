@@ -3,9 +3,13 @@ const Schema = mongoose.Schema;
 const roomSchema = new Schema({
 	title: String,
 	rent: Number,
+	startDate: {type: Date, default: Date.now},
+	endDate: {type: Date, default: Date.now},
+	sqr: Number,
 	postalCode: Number,
-	address: String,
-    description:String,
+	street: String,
+	district: String,
+	description: String,
 	imageUrl: String,
 	owner: {
 		type: Schema.Types.ObjectId,
