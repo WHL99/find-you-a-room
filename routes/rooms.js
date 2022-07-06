@@ -21,6 +21,25 @@ router.post('/add-room', fileUploader.single('room-image'), (req, res, next) => 
         })
 });
 
+//
+// router.post("/", upload.array("img", 3 ), async (req, res) => {
+
+//     const urls = [];
+//     const files = req.files;
+//     for (const file of files) {
+//       const { path } = file;
+//       const newPath = await cloudinaryImageUploadMethod(path);
+//       urls.push(newPath);
+//     }
+    
+//     const product = new Product({ 
+//       name: req.body.name,
+//       productImages: urls.map( url => url.res ),
+//     });
+
+//  }
+ //
+
 router.get('/detail-room', (req, res, next) => {
     res.render('rooms/detail')
 });

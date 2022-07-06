@@ -8,10 +8,22 @@ body {
   display: flex;
 }
 
-.form-container {
+.form-container-signup {
   width: 35%;
   margin: 0 auto;
-  background-color: #F5DEB3;
+  background-color: #DDE0BD;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.form-container-login {
+  width: 35%;
+  margin: 0 auto;
+  background-color: #88CCF1;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -36,12 +48,20 @@ form > * {
   width: 65%;
   overflow: hidden;
   height: 100vh;
+  position: relative;
+}
+
+.header-landing {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  margin: 0 auto;
+  color: #1A281F;
+  font-size: 1.5rem;
 }
 
 img {
-  display: block;
-  width: 100%;
-  height: auto;
+  flex-shrink: 0;
 }
 
 input[type=text], select {
@@ -49,7 +69,7 @@ input[type=text], select {
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
   border: none;
 }
@@ -59,7 +79,7 @@ input[type=password], select {
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
   border: none;
 }
@@ -69,7 +89,7 @@ input[type=submit] {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -85,11 +105,11 @@ a {
 }
 
 .signup-bg {
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .btn-submit {
-  border-radius: 6px;
+  border-radius: 10px;
   background-color: red;
   color: white;
   font-weight: bold;
