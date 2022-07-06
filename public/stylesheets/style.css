@@ -168,7 +168,7 @@ a {
 }
 
 
-/* Wen Css */
+/* Wen css */
 header>img {
   height: 55px;
   margin-left: 7px
@@ -237,7 +237,8 @@ header {
   justify-content: center;
   align-items: center;
   margin-top:-10%;
-  padding: 41%;
+  padding-right: 41%;
+  padding-left: 41%;
   box-sizing: border-box;
 }
 
