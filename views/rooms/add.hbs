@@ -1,0 +1,38 @@
+<h1>Here you could add your room</h1>
+
+<form action="/add-room" method="POST" enctype="multipart/form-data">
+    <label for="title">Title: </label>
+    <input type="text" name="title">
+
+    <label for="rent">Rent (per night): </label>
+    <input type="text" name="rent" pattern="[0-9]{1-10}" title="Ten digit rent" />
+
+    <label for="startDate">Start date: </label>
+    <input type="date" name="startDate">
+
+    <label for="endDate">End date: </label>
+    <input type="date" name="endDate">
+
+    <label for="sqr">Squaremeter of the room: </label>
+    <input type="number" name="sqr">
+
+    <Label for="postalCode">Postal code:</Label>
+    <input type="text" name="postalCode" pattern="[0-9]{5}" title="Five digit postal code" />
+
+    <label for="street">Street: </label>
+    <input type="text" name="street">
+
+    <label for="district">District: </label>
+    <input type="text" name="district">
+
+    <label for="description">Description: </label>
+    <input type="text" name="description">
+
+    <label>Upload your room's photos: </label>
+    <input type="file" name="room-image" class="form-control-file" multiple>
+
+    <button type="submit" class="btn-submit">Add this room</button>
+    {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+    {{/if}}
+</form>

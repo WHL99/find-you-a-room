@@ -1,11 +1,19 @@
-<h1>Login 🔑</h1>
-<form action="/login" method="POST">
-    <label for="email">E-Mail: </label>
-    <input type="text" name="email" placeholder="E-Mail">
-    <label for="password">Password: </label>
-    <input type="password" name="password" placeholder="Password">
+<div class="form-landing">
+<div class="form-container-login">
+  <form action="/login" method="POST">
+    <label for="email">E-Mail</label>
+    <input type="text" name="email" placeholder="E-Mail" required>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" name="password" required>
+
     <button type="submit" class="btn-submit">Login</button>
     {{#if errorMessage}}
     <p>{{errorMessage}}</p>
     {{/if}}
-</form>
+  </form>
+</div>
+<div class="form-bg">
+  <img class="signup-bg" src="https://images.unsplash.com/photo-1585492197563-572494c5ff0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80">
+</div>
+</div>

@@ -3,7 +3,14 @@ const Schema = mongoose.Schema;
 const roomSchema = new Schema({
 	title: String,
 	rent: Number,
-    description:String,
+	startDate: {type: Date, default: Date.now},
+	endDate: {type: Date, default: Date.now},
+	sqr: Number,
+	postalCode: Number,
+	street: String,
+	district: String,
+	description: String,
+	imageUrl: String,
 	owner: {
 		type: Schema.Types.ObjectId,
 		ref: 'User'
@@ -12,3 +19,4 @@ const roomSchema = new Schema({
 
 const Room = mongoose.model('Room', roomSchema);
 module.exports = Room;
+
