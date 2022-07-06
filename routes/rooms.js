@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const Room = require('../models/Room')
-const fileUploader = require('../config/cloudinary.config');
+const Room = require("../models/Room");
+const fileUploader = require("../config/cloudinary.config");
 
 router.get('/add-room', (req, res, next) => {
     res.render('rooms/add')
@@ -38,6 +38,19 @@ router.get('/detail-room/:id', (req, res, next) => {
 
 
 
+router.get("/detail-room", (req, res, next) => {
+  res.render("rooms/detail");
+});
 
+router.get("/all-rooms", (req, res, next) => {
+  Room.find()
+    .then((roomsFromDb) => {
+      console.log(roomsFromDb);
+      res.render("rooms/index", { roomsFromDb });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
 
 module.exports = router;

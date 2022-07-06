@@ -1,7 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-landing {
@@ -30,6 +30,11 @@ body {
   align-items: center;
   padding: 5rem;
   box-sizing: border-box;
+}
+
+.container-index {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 form {
@@ -121,4 +126,41 @@ a {
 .btn-submit:hover {
   cursor: pointer;
   background-color: maroon;
+}
+
+.navbar {
+  text-align: center;
+  padding: 1rem;
+}
+
+.results {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.room-tile {
+  background-color: #f3f3f3;
+  width: 400px;
+  min-width: 400px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.thumbnail-parent {
+  border-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.thumbnail {
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
 }
