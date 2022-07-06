@@ -51,4 +51,15 @@ router.get("/detail-room", (req, res, next) => {
   res.render("rooms/detail");
 });
 
+router.get("/all-rooms", (req, res, next) => {
+  Room.find()
+    .then((roomsFromDb) => {
+      console.log(roomsFromDb);
+      res.render("rooms/index", { roomsFromDb });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
 module.exports = router;
