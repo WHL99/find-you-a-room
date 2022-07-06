@@ -9,6 +9,7 @@ const roomSchema = new Schema({
 	postalCode: Number,
 	street: String,
 	district: String,
+	city: String,
 	description: String,
 	imageUrl: [String],
 	owner: {
