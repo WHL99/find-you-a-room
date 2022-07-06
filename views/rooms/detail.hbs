@@ -1,1 +1,16 @@
-<h1>Here is your room detail.</h1>
+<h1>Room detail</h1>
+
+
+{{#each oneRoomData}}
+{{#each imageUrl}}
+<img src="{{this}}" alt="room-image" width="200">
+{{/each}}
+{{/each}}
+
+
+<h2>Title: {{oneRoomData.title}}</h2>
+<h2>Rent: {{oneRoomData.rent}} per night</h2>
+<h2>Period: {{oneRoomData.startDate}} to {{oneRoomData.endDate}}</h2>
+<h2>Address: {{oneRoomData.street}}, {{oneRoomData.postalCode}}</h2>
+<h2>District: {{oneRoomData.district}}</h2>
+<h2>Description: {{oneRoomData.description}}</h2>
