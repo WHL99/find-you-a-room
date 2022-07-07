@@ -1,6 +1,28 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
-<div>
-  <a href="/signup">Sign Up</a>
-  <a href="/login">Login</a>
-</div>
+<header>
+  <img src="/images/logo.png" alt="logo">
+  <div class="text-next-logo">Find You a Room</div>
+  <nav>
+    <a href="/signup">Sign Up</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<section id="search-index">
+  <form class="form-container-search-index" action="/room-search" method="GET">
+    <div class="">
+      <select class="select-search-index" name="searchByCity" >
+        <option value="Berlin">Berlin</option>
+        <option value="Cologne">Cologne</option>
+        <option value="Frankfurt">Frankfurt</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="Munich">Munich</option>
+        <option value="Stuttgart">Stuttgart</option>
+        <option value="default" selected>Where are you looking for a room?</option>
+      </select>
+    </div>
+    <div class="">
+      <button type="submit" class="btn-submit-search-index">Search rooms</button>
+    </div>
+    </div>
+  </form>
+</section>

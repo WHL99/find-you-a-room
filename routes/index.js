@@ -50,4 +50,27 @@ router.get("/profile", (req, res, next) => {
     });
 });
 
+router.get("/profile", (req, res, next) => {
+  const userId = req.session.currentUser._id;
+  User.findById(userId)
+    .then((usersFromDB) => {
+      res.render("profile", { oneUserData: usersFromDB });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+//search rooms by city
+router.get("/room-search", (req, res, next) => {
+  Room.find(req.query.searchByCity)
+    .then((roomsFromDB) => {
+      res.render("room-search-results", { seeRoomsByCity: roomsFromDB });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+// {city:req.query.q}
+
 module.exports = router;

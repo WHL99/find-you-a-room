@@ -25,11 +25,25 @@
     <label for="district">District: </label>
     <input type="text" name="district">
 
+
+
+    <label for="city">City:</label>
+    <select name="city" id="select-city">
+        <option value="Berlin">Berlin</option>
+        <option value="Cologne">Cologne</option>
+        <option value="Frankfurt">Frankfurt</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="Munich">Munich</option>
+        <option value="Stuttgart">Stuttgart</option>
+        <option value="default" selected>Choose..</option>
+    </select>
+
     <label for="description">Description: </label>
     <input type="text" name="description">
 
     <label>Upload your room's photos: </label>
-    <input type="file" name="room-image" class="form-control-file" multiple>
+    <input type="file" name="room-images" class="form-control-file" multiple>
+    <p>You can upload maximum 5 photos.</p>
 
     <button type="submit" class="btn-submit">Add this room</button>
     {{#if errorMessage}}

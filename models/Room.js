@@ -9,8 +9,9 @@ const roomSchema = new Schema({
 	postalCode: Number,
 	street: String,
 	district: String,
+	city: String,
 	description: String,
-	imageUrl: String,
+	imageUrl: [String],
 	owner: {
 		type: Schema.Types.ObjectId,
 		ref: 'User'

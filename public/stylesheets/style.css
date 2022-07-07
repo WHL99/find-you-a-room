@@ -48,7 +48,7 @@ form {
   align-items: center;
 }
 
-form > * {
+form>* {
   width: 100%;
 }
 
@@ -72,7 +72,8 @@ img {
   flex-shrink: 0;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -82,7 +83,8 @@ input[type=text], select {
   border: none;
 }
 
-input[type=password], select {
+input[type=password],
+select {
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -188,3 +190,80 @@ a {
 .room-sqm {
   font-weight: 900;
 }
+
+/* Wen css */
+header>img {
+  height: 55px;
+  margin-left: 7px
+}
+
+nav>a {
+  text-decoration: none;
+  font-size: 1.6em;
+  color: #55b0b0;
+  font-weight: lighter;
+  margin-right: 30px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 12px 20px;
+}
+
+#search-index {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-image: url(/images/index-bg.jpg);
+  background-position: 0 0;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  position: relative;
+}
+
+.text-next-logo {
+  font-size: 3em;
+  font-family: 'Pacifico';
+  margin-left: -800px;
+  color: #67c5c5;
+
+}
+
+.btn-submit-search-index {
+  border-radius: 10px;
+  background-color:  #67c5c5;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  margin-top: 1rem;
+  width:257px;
+}
+
+.btn-submit-search-index:hover {
+  cursor: pointer;
+  background-color: #15f9f9;
+}
+
+.form-container-search-index {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:-10%;
+  padding-right: 41%;
+  padding-left: 41%;
+  box-sizing: border-box;
+}
+
+
+
