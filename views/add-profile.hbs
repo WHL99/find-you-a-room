@@ -1,8 +1,7 @@
 <h1>Add Your Profile</h1>
 
-<form action="/add-profile" method="POST" enctype="multipart/form-data">
-
-
+<div class="create-form">
+    <form action="/add-profile" method="POST" enctype="multipart/form-data">
     <label for="birthday">Birthday:</label>
     <input type="date" name="birthday">
 
@@ -13,7 +12,7 @@
         <option value="other">Other</option>
         <option value="default" selected>Choose..</option>
     </select>
-
+    
     <label for="city">City:</label>
     <input type="text" name="city" placeholder="City">
 
@@ -23,10 +22,9 @@
     <label>Upload your profile photo: </label>
     <input type="file" name="profile-image" class="form-control-file" required/>
 
-
-
     <button type="submit" class="btn-submit">Create profile</button>
     {{#if errorMessage}}
     <p>{{errorMessage}}</p>
     {{/if}}
-</form>
+    </form>
+</div>
