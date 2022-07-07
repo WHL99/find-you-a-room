@@ -72,6 +72,12 @@ img {
   flex-shrink: 0;
 }
 
+.create-form {
+  max-width: 500px;
+  display: flex;
+  padding-left: 3rem;
+}
+
 input[type=text],
 select {
   padding: 1rem;
@@ -101,6 +107,26 @@ input[type=submit] {
   margin: 8px 0;
   border-radius: 10px;
   cursor: pointer;
+}
+
+input[type=tel] {
+  background-color: #ffffff;
+  color: white;
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  border-style: none;
+}
+
+input[type=date] {
+  background-color: #ffffff;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 8px 0;
+  border-style: none;
 }
 
 a {
