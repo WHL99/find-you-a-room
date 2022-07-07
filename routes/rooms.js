@@ -38,10 +38,6 @@ router.get('/detail-room/:id', (req, res, next) => {
 
 
 
-router.get("/detail-room", (req, res, next) => {
-    res.render("rooms/detail");
-});
-
 router.get("/all-rooms", (req, res, next) => {
     Room.find()
         .then((roomsFromDb) => {
@@ -51,6 +47,10 @@ router.get("/all-rooms", (req, res, next) => {
         .catch((err) => {
             next(err);
         });
+});
+
+router.get("/detail-room", (req, res, next) => {
+    res.render("rooms/detail");
 });
 
 module.exports = router;
