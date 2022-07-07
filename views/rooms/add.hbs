@@ -2,33 +2,33 @@
 
 <form action="/add-room" method="POST" enctype="multipart/form-data">
     <label for="title">Title: </label>
-    <input type="text" name="title">
+    <input type="text" name="title" required>
 
     <label for="rent">Rent (per night): </label>
-    <input type="text" name="rent" pattern="[0-9]{1-10}" title="Ten digit rent" />
+    <input type="text" name="rent" pattern="[0-9]{1-10}" title="Ten digit rent" required/>
 
     <label for="startDate">Start date: </label>
-    <input type="date" name="startDate">
+    <input type="date" name="startDate" required>
 
     <label for="endDate">End date: </label>
-    <input type="date" name="endDate">
+    <input type="date" name="endDate" required>
 
     <label for="sqr">Squaremeter of the room: </label>
-    <input type="number" name="sqr">
+    <input type="number" name="sqr" >
 
     <Label for="postalCode">Postal code:</Label>
-    <input type="text" name="postalCode" pattern="[0-9]{5}" title="Five digit postal code" />
+    <input type="text" name="postalCode" pattern="[0-9]{5}" title="Five digit postal code" required/>
 
     <label for="street">Street: </label>
-    <input type="text" name="street">
+    <input type="text" name="street" required>
 
     <label for="district">District: </label>
-    <input type="text" name="district">
+    <input type="text" name="district" required>
 
 
 
     <label for="city">City:</label>
-    <select name="city" id="select-city">
+    <select name="city" id="select-city" required>
         <option value="Berlin">Berlin</option>
         <option value="Cologne">Cologne</option>
         <option value="Frankfurt">Frankfurt</option>
@@ -39,10 +39,10 @@
     </select>
 
     <label for="description">Description: </label>
-    <input type="text" name="description">
+    <input type="text" name="description" required>
 
     <label>Upload your room's photos: </label>
-    <input type="file" name="room-images" class="form-control-file" multiple>
+    <input type="file" name="room-images" class="form-control-file" multiple required>
     <p>You can upload maximum 5 photos.</p>
 
     <button type="submit" class="btn-submit">Add this room</button>

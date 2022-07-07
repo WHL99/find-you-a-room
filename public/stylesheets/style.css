@@ -322,4 +322,7 @@ header {
   cursor: pointer;
   background-color: #15f9f9;
 }
+.to-add-room{
+  padding-left: 60px;
+}
 /* end wen css for index-select-rooms-by-city (7 July 19:20) */
