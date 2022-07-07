@@ -1,6 +1,4 @@
- {{!--  <div class="navbar">
-    <p>LOGO</p>
-  </div> --}}
+
   <div class="container-index">
     <h1>All rooms</h1>
     <div class="results">
@@ -14,15 +12,10 @@
           <h2 class="room-rent">{{rent}} €</h2>
           <p class="room-sqm">{{sqr}} sqm</p>
           <div class="period">
-          <p>{{startDate}}</p>
-          <p>{{endDate}}</p>
+          <p>Availible from: {{formatStartDate}} to {{formatEndDate}}</p>
       </div>
         </div>
-{{!--       <div class="address">
-        <p>{{street}}</p>
-        <p>{{district}}</p>
-        <p>{{postalCode}}</p>
-      </div> --}}
+
       </div>
       {{/each}}
     </div>
