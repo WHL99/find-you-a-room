@@ -1,29 +1,26 @@
- {{!--  <div class="navbar">
-    <p>LOGO</p>
-  </div> --}}
-  <div class="container-index">
-   
-    <div class="results">
-       {{#each seeRoomsByCity}}
-      <div class="room-tile">
-        <div class="thumbnail-parent">
-         
-          <img src="{{imageUrl}}" class="thumbnail">
-        </div>
-      <a href="/" class="room-title">{{title}}</a>
-      <h2>{{rent}} €</h2>
+{{!-- <div class="navbar">
+  <p>LOGO</p>
+</div> --}}
+<div class="container-index">
+  <div class="results">
+    {{#each seeRoomsByCity}}
+    <div class="room-tile">
+      <div class="thumbnail-parent">
+        <img src="{{imageUrl.[0]}}" class="thumbnail">
+      </div>
+      <a href="/all-rooms/{{_id}}" class="room-title">{{title}}</a>
+      <h2>{{rent}} € /night</h2>
       <p>{{sqr}} sqm</p>
       <div class="period">
-        <p>{{startDate}}</p>
-        <p>{{endDate}}</p>
+        <p>Available from: {{formatStartDate}} to {{formatEndDate}}</p>
       </div>
       <a href="/">Edit</a>
-{{!--       <div class="address">
+      {{!-- <div class="address">
         <p>{{street}}</p>
         <p>{{district}}</p>
         <p>{{postalCode}}</p>
       </div> --}}
-      </div>
-      {{/each}}
     </div>
+    {{/each}}
   </div>
+</div>
