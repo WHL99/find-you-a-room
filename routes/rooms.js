@@ -26,6 +26,18 @@ router.post(
     // const imageUrl = [];
     const imageUrl = req.files.map((file) => file.path);
 
+    Room.findById(roomId)
+        .populate('owner')
+        .then(roomsFromDB => {
+            roomsFromDB.formatStartDate = roomsFromDB.startDate.toDateString().slice(4)
+            roomsFromDB.formatEndDate = roomsFromDB.endDate.toDateString().slice(4)
+            console.log(roomsFromDB.formatEndDate)
+            res.render('rooms/detail', { oneRoomData: roomsFromDB })
+        })
+        .catch(err => {
+            next(err)
+        })
+})
     Room.create({
       title,
       rent,
@@ -47,8 +59,7 @@ router.post(
       .catch((err) => {
         next(err);
       });
-  }
-);
+  
 
 router.get("/all-rooms/:id", (req, res, next) => {
   const roomId = req.params.id;
@@ -64,19 +75,26 @@ router.get("/all-rooms/:id", (req, res, next) => {
     });
 });
 
-router.get("/detail-room", (req, res, next) => {
-  res.render("rooms/detail");
+router.get("/all-rooms", (req, res, next) => {
+    Room.find()
+        .then((roomsFromDb) => {
+           //wen add here for format date
+            const formatDateRooms = roomsFromDb.map(function(room){
+                room.formatStartDate = room.startDate.toDateString().slice(4)
+                room.formatEndDate = room.endDate.toDateString().slice(4)
+                console.log(room.formatEndDate)
+                return room
+            })
+            res.render("rooms/index", { roomsFromDb:formatDateRooms });
+            //
+        })
+        .catch((err) => {
+            next(err);
+        });
 });
 
-router.get("/all-rooms", (req, res, next) => {
-  Room.find()
-    .then((roomsFromDb) => {
-      console.log(roomsFromDb);
-      res.render("rooms/index", { roomsFromDb });
-    })
-    .catch((err) => {
-      next(err);
-    });
+router.get("/detail-room", (req, res, next) => {
+    res.render("rooms/detail");
 });
 
 module.exports = router;

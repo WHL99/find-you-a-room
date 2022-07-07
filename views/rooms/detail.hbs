@@ -3,17 +3,23 @@
 
 {{#each oneRoomData}}
 {{#each imageUrl}}
-<img src="{{this}}" alt="room-image" width="200">
+<img class="mySlides" src="{{this}}" alt="room-image" width="700">
 {{/each}}
 {{/each}}
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 
 
 <h2>Title: {{oneRoomData.title}}</h2>
 <h2>Rent: {{oneRoomData.rent}} per night</h2>
-<h2>Period: {{oneRoomData.startDate}} to {{oneRoomData.endDate}}</h2>
+<h2>Period: {{oneRoomData.formatStartDate}} to {{oneRoomData.formatEndDate}}</h2>
 <h2>Address: {{oneRoomData.street}}, {{oneRoomData.postalCode}}</h2>
 <h2>District: {{oneRoomData.district}}</h2>
 <h2>District: {{oneRoomData.city}}</h2>
 <h2>Description: {{oneRoomData.description}}</h2>
 
-<a href="/add-room">Add one more room</a>
+
+<h2>owner: {{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</h2>
+{{!-- <a href="/profile">See the landlord's profile</a> --}}
+<a href="mailto:{{oneRoomData.owner.email}}">Contact the landlord</a>
+

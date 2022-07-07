@@ -47,6 +47,17 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+// router.get("/all-rooms", (req, res, next) => {
+//   Room.find()
+//       .then((roomsFromDb) => {
+//           console.log(roomsFromDb);
+//           res.render("rooms/index", { roomsFromDb });
+//       })
+//       .catch((err) => {
+//           next(err);
+//       });
+// });
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
@@ -64,7 +75,6 @@ router.post("/login", (req, res, next) => {
   }
 
   User.findOne({ email })
-
     .then((user) => {
       if (!user) {
         res.render("login", {
@@ -79,7 +89,7 @@ router.post("/login", (req, res, next) => {
       //if the profile is added, go to index
       else if (user.city && bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
-        res.redirect("/rooms/index");
+        res.redirect("/");
       }
       else {
         res.render("login", { errorMessage: "Incorrect password." });
