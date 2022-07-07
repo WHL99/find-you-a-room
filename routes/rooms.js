@@ -27,6 +27,7 @@ router.get('/detail-room/:id', (req, res, next) => {
     console.log(req.params.id)
 
     Room.findById(roomId)
+    .populate('owner')
         .then(roomsFromDB => {
             res.render('rooms/detail', { oneRoomData: roomsFromDB })
             console.log(roomsFromDB.imageUrl[0])
@@ -35,6 +36,23 @@ router.get('/detail-room/:id', (req, res, next) => {
             next(err)
         })
 })
+
+//
+// router.get('/movies/:id', (req, res, next) => {
+// 	const movieId = req.params.id
+
+// 	Movie.findById(movieId)
+// 		.populate('cast')
+
+// 		.then(moviesFromDB => {
+// 			//console.log(moviesFromDB)
+// 			res.render('movies/show', { movieDetail: moviesFromDB })
+// 		})
+// 		.catch(err => {
+// 			next(err)
+// 		})
+// })
+//
 
 
 

@@ -16,4 +16,8 @@
 <h2>District: {{oneRoomData.city}}</h2>
 <h2>Description: {{oneRoomData.description}}</h2>
 
-<a href="/add-room">Add one more room</a>
+
+<h2>owner: {{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</h2>
+{{!-- <a href="/profile">See the landlord's profile</a> --}}
+<a href="mailto:{{oneRoomData.owner.email}}">Contact the landlord</a>
+
