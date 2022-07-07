@@ -2,6 +2,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f3f3;
 }
 
 .form-landing {
@@ -35,6 +36,8 @@ body {
 .container-index {
   padding-left: 3rem;
   padding-right: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 form {
@@ -135,23 +138,24 @@ a {
 
 .results {
   display: flex;
-  overflow-x: hidden;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
 }
 
 .room-tile {
-  background-color: #f3f3f3;
-  width: 400px;
-  min-width: 400px;
-  padding: 1rem;
+  width: 300px;
+  min-width: 300px;
+/*   padding: 1rem; */
   border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  padding: 0.5rem;
 }
 
-.room-title {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
-}
+/* .room-tile:hover {
+  box-shadow: 10px 10px 15px #d3d3d3;
+} */
 
 .thumbnail-parent {
   border-radius: 10px;
@@ -160,7 +164,27 @@ a {
 
 .thumbnail {
   border-radius: 10px;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
+}
+
+.room-facts {
+  padding: 0.5rem;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.room-rent {
+  font-size: 1rem;
+  color: #3C4F76;
+}
+
+.room-sqm {
+  font-weight: 900;
 }
