@@ -89,7 +89,7 @@ router.post("/login", (req, res, next) => {
       //if the profile is added, go to index
       else if (user.city && bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
-        res.redirect("/");
+        res.redirect("/all-rooms");
       }
       else {
         res.render("login", { errorMessage: "Incorrect password." });
