@@ -291,3 +291,35 @@ header {
   color: #3C4F76;
   font-size: 1rem;
 }
+
+
+
+/* wen css for index-select-rooms-by-city (7 July 19:20) */
+.form-container-search-roomsindex{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:-10%;
+  padding-right: 41%;
+  padding-left: 41%;
+  margin-top: -25vh;
+  margin-bottom: -32vh;
+  box-sizing: border-box;
+}
+.btn-submit-search-roomsindex {
+  border-radius: 10px;
+  background-color:  #67c5c5;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  margin-top: 1rem;
+  width:257px;
+}
+.btn-submit-search-roomsindex:hover {
+  cursor: pointer;
+  background-color: #15f9f9;
+}
+/* end wen css for index-select-rooms-by-city (7 July 19:20) */
