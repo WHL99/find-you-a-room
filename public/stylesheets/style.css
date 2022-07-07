@@ -1,7 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f3f3;
 }
 
 .form-landing {
@@ -32,6 +33,13 @@ body {
   box-sizing: border-box;
 }
 
+.container-index {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
 form {
   width: 100%;
   display: flex;
@@ -40,7 +48,7 @@ form {
   align-items: center;
 }
 
-form > * {
+form>* {
   width: 100%;
 }
 
@@ -64,7 +72,8 @@ img {
   flex-shrink: 0;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -74,7 +83,8 @@ input[type=text], select {
   border: none;
 }
 
-input[type=password], select {
+input[type=password],
+select {
   padding: 1rem;
   margin: 8px 0;
   display: block;
@@ -121,4 +131,163 @@ a {
 .btn-submit:hover {
   cursor: pointer;
   background-color: maroon;
+}
+
+.navbar {
+  text-align: center;
+  padding: 1rem;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+}
+
+.room-tile {
+  width: 300px;
+  min-width: 300px;
+/*   padding: 1rem; */
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
+
+/* .room-tile:hover {
+  box-shadow: 10px 10px 15px #d3d3d3;
+} */
+
+.thumbnail-parent {
+  border-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.thumbnail {
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-facts {
+  padding: 0.5rem;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.room-rent {
+  font-size: 1rem;
+  color: #3C4F76;
+}
+
+.room-sqm {
+  font-weight: 900;
+}
+
+/* Wen css */
+header>img {
+  height: 55px;
+  margin-left: 7px
+}
+
+nav>a {
+  text-decoration: none;
+  font-size: 1.6em;
+  color: #55b0b0;
+  font-weight: lighter;
+  margin-right: 30px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 12px 20px;
+}
+
+#search-index {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-image: url(/images/index-bg.jpg);
+  background-position: 0 0;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  position: relative;
+}
+
+.text-next-logo {
+  font-size: 3em;
+  font-family: 'Pacifico';
+  margin-left: -800px;
+  color: #67c5c5;
+
+}
+
+.btn-submit-search-index {
+  border-radius: 10px;
+  background-color:  #67c5c5;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  margin-top: 1rem;
+  width:257px;
+}
+
+.btn-submit-search-index:hover {
+  cursor: pointer;
+  background-color: #15f9f9;
+}
+
+.form-container-search-index {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:-10%;
+  padding-right: 41%;
+  padding-left: 41%;
+  box-sizing: border-box;
+}
+
+/* CSS room detail */
+.room-container {
+  padding: 3rem;
+  max-width: 50%;
+}
+
+.mySlides {
+  border-radius: 10px;
+/*   padding-bottom: 1rem; */
+  width: 800px;
+  height: 400px;
+}
+
+.titleimg {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.roomTitle {
+  font-size: 1.5rem;
+}
+
+.roomRent {
+  color: #3C4F76;
+  font-size: 1rem;
 }
