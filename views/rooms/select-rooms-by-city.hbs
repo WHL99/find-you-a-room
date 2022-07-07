@@ -1,10 +1,10 @@
  {{!--  <div class="navbar">
     <p>LOGO</p>
-  </div> --}}
+  </div> --}}{{#each seeRoomsByCity}}
   <div class="container-index">
-    <h1>All rooms</h1>
+    <h1>All rooms in {{city}} </h1>
     <div class="results">
-      {{#each seeRoomsByCity}}
+      
       <div class="room-tile">
         <div class="thumbnail-parent">
           <img src="{{imageUrl}}" class="thumbnail">

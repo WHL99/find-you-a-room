@@ -1,7 +1,10 @@
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("模板 JS imported successfully!");
+    console.log("seconde-project JS imported successfully!");
   },
   false
 );
+
+
+

@@ -40,10 +40,23 @@ router.get('/profile', (req, res, next) => {
 })
 
 
-//search rooms by city
+//select rooms by city
 router.get("/room-search", (req, res, next) => {
   Room.find({ city: req.query.searchByCity })
     .then(roomsFromDB => {
+
+
+      // const theDate = roomsFromDB.map(roomsFromDB.startDate => file.path)
+      //console.log(roomsFromDB.startDate)
+
+       if(req.query.searchByCity === ''){
+        res.redirect("/all-rooms")
+       }
+
+
+
+     
+
       res.render("rooms/select-rooms-by-city", { seeRoomsByCity: roomsFromDB })
     })
     .catch((err) =>
