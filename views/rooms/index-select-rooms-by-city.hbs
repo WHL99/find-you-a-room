@@ -1,0 +1,46 @@
+
+{{!-- wen add selector for city --}}
+<section>
+  <form class="form-container-search-roomsindex" action="/room-search-rooms-index" method="GET">
+    <div class="">
+      <select class="select-search-roomsindex" name="searchByCity" >
+        <option value="Berlin">Berlin</option>
+        <option value="Cologne">Cologne</option>
+        <option value="Frankfurt">Frankfurt</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="Munich">Munich</option>
+        <option value="Stuttgart">Stuttgart</option>
+        <option value="" selected>Where are you looking for a room?</option>
+      </select>
+    </div>
+    <div class="">
+      <button type="submit" class="btn-submit-search-roomsindex">Search rooms</button>
+    </div>
+    </div>
+  </form>
+</section>
+
+  <a class="to-add-room" href="/add-room">Do you want to rent out your room?</a>
+
+{{!-- end here --}}
+
+<div class="container-index">
+  <div class="results">
+    {{#each roomsFromDb}}
+    <div class="room-tile">
+      <div class="thumbnail-parent">
+        <img src="{{imageUrl.[0]}}" class="thumbnail">
+      </div>
+      <div class="room-facts">
+        <a href="/all-rooms/{{_id}}" class="room-title">{{title}}</a>
+        <h2 class="room-rent">{{rent}} € /night</h2>
+        <p class="room-sqm">{{sqr}} sqm</p>
+        <div class="period">
+          <p>Available from: {{formatStartDate}} to {{formatEndDate}}</p>
+        </div>
+      </div>
+
+    </div>
+    {{/each}}
+  </div>
+</div>

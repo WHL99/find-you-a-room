@@ -1,22 +1,23 @@
 
-  <div class="container-index">
-    <h1>All rooms</h1>
-    <div class="results">
-      {{#each roomsFromDb}}
-      <div class="room-tile">
-        <div class="thumbnail-parent">
-          <img src="{{imageUrl}}" class="thumbnail">
-        </div>
-        <div class="room-facts">
-          <a href="/all-rooms/{{_id}}" class="room-title">{{title}}</a>
-          <h2 class="room-rent">{{rent}} €</h2>
-          <p class="room-sqm">{{sqr}} sqm</p>
-          <div class="period">
-          <p>Available from: {{formatStartDate}} to {{formatEndDate}}</p>
-      </div>
-        </div>
 
+
+<div class="container-index">
+  <div class="results">
+    {{#each roomsFromDb}}
+    <div class="room-tile">
+      <div class="thumbnail-parent">
+        <img src="{{imageUrl.[0]}}" class="thumbnail">
       </div>
-      {{/each}}
+      <div class="room-facts">
+        <a href="/all-rooms/{{_id}}" class="room-title">{{title}}</a>
+        <h2 class="room-rent">{{rent}} € /night</h2>
+        <p class="room-sqm">{{sqr}} sqm</p>
+        <div class="period">
+          <p>Available from: {{formatStartDate}} to {{formatEndDate}}</p>
+        </div>
+      </div>
+
     </div>
+    {{/each}}
   </div>
+</div>
