@@ -1,22 +1,22 @@
-<div class="room-container">
-  {{#each oneRoomData}}
-  {{#each imageUrl}}
-  <div class="imgContainer">
-    <img class="titleimg" src="{{this}}" alt="room-image" width="200">
-  </div>
-  {{/each}}
-  {{/each}}
+{{#each oneRoomData}}
+{{#each imageUrl}}
+<img class="mySlides" src="{{this}}" alt="room-image" width="700">
+{{/each}}
+{{/each}}
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 
 
-  <h2 class="roomTitle">{{oneRoomData.title}}</h2>
-  <h3 class="roomRent">{{oneRoomData.rent}} € / per night</h3>
-  <p>Period: {{oneRoomData.startDate}} - {{oneRoomData.endDate}}</p>
-  <div class="address">
-    <h4>{{oneRoomData.street}}, {{oneRoomData.postalCode}}</h4>
-    <h4>{{oneRoomData.district}}</h4>
-    <h2>{{oneRoomData.city}}</h2>
-  </div>
-  <p>Description: <br><strong></strong>{{oneRoomData.description}}</p>
+<h2>Title: {{oneRoomData.title}}</h2>
+<h2>Rent: {{oneRoomData.rent}} per night</h2>
+<h2>Period: {{oneRoomData.formatStartDate}} to {{oneRoomData.formatEndDate}}</h2>
+<h2>Address: {{oneRoomData.street}}, {{oneRoomData.postalCode}}</h2>
+<h2>District: {{oneRoomData.district}}</h2>
+<h2>District: {{oneRoomData.city}}</h2>
+<h2>Description: {{oneRoomData.description}}</h2>
 
-  <a href="/add-room">Add one more room</a>
-</div>
+
+<h2>owner: {{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</h2>
+{{!-- <a href="/profile">See the landlord's profile</a> --}}
+<a href="mailto:{{oneRoomData.owner.email}}">Contact the landlord</a>
+
