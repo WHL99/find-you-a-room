@@ -95,7 +95,7 @@ router.get("/all-rooms", (req, res, next) => {
                 console.log(room.formatEndDate)
                 return room
             })
-            res.render("rooms/index", { roomsFromDb: formatDateRooms });
+            res.render("rooms/index-select-rooms-by-city", { roomsFromDb: formatDateRooms });
             //
         })
         .catch((err) => {
