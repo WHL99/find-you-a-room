@@ -1,19 +1,22 @@
-<h1>Room detail</h1>
+<div class="room-container">
+  {{#each oneRoomData}}
+  {{#each imageUrl}}
+  <div class="imgContainer">
+    <img class="titleimg" src="{{this}}" alt="room-image" width="200">
+  </div>
+  {{/each}}
+  {{/each}}
 
 
-{{#each oneRoomData}}
-{{#each imageUrl}}
-<img src="{{this}}" alt="room-image" width="200">
-{{/each}}
-{{/each}}
+  <h2 class="roomTitle">{{oneRoomData.title}}</h2>
+  <h3 class="roomRent">{{oneRoomData.rent}} € / per night</h3>
+  <p>Period: {{oneRoomData.startDate}} - {{oneRoomData.endDate}}</p>
+  <div class="address">
+    <h4>{{oneRoomData.street}}, {{oneRoomData.postalCode}}</h4>
+    <h4>{{oneRoomData.district}}</h4>
+    <h2>{{oneRoomData.city}}</h2>
+  </div>
+  <p>Description: <br>{{oneRoomData.description}}</p>
 
-
-<h2>Title: {{oneRoomData.title}}</h2>
-<h2>Rent: {{oneRoomData.rent}} per night</h2>
-<h2>Period: {{oneRoomData.startDate}} to {{oneRoomData.endDate}}</h2>
-<h2>Address: {{oneRoomData.street}}, {{oneRoomData.postalCode}}</h2>
-<h2>District: {{oneRoomData.district}}</h2>
-<h2>District: {{oneRoomData.city}}</h2>
-<h2>Description: {{oneRoomData.description}}</h2>
-
-<a href="/add-room">Add one more room</a>
+  <a href="/add-room">Add one more room</a>
+</div>

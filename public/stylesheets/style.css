@@ -265,5 +265,33 @@ header {
   box-sizing: border-box;
 }
 
+/* CSS room detail */
+.room-container {
+  padding: 3rem;
+  max-width: 50%;
+}
+
+.imgContainer {
+  border-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.titleimg {
+  border-radius: 10px;
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.roomTitle {
+  font-size: 1.5rem;
+}
+
+.roomRent {
+  color: #3C4F76
+}
+
+
+
 
 
