@@ -2,7 +2,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
+  background-color:rgb(233,238,238);
 }
 
 .form-landing {
@@ -12,7 +13,7 @@ body {
 .form-container-signup {
   width: 35%;
   margin: 0 auto;
-  background-color: #DDE0BD;
+  background-color:rgba(77,170,179,0.2);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@ body {
 .form-container-login {
   width: 35%;
   margin: 0 auto;
-  background-color: #88CCF1;
+  background-color: rgba(77,170,179,0.2);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -38,6 +39,7 @@ body {
   padding-right: 3rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
+  background-color:rgb(233,238,238);
 }
 
 form {
@@ -67,7 +69,10 @@ form>* {
 .add-form {
   padding: 3rem;
   max-width: 500px;
+  background-color:rgb(233,238,238);
 }
+
+
 
 .form-bg {
   width: 65%;
@@ -128,9 +133,14 @@ input[type=submit] {
 
 input[type=tel] {
   background-color: #ffffff;
-  color: white;
+  color: black;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+  display: block;
+  padding: 1rem;
+  box-sizing: border-box;
+
   margin: 8px 0;
   border-radius: 10px;
   cursor: pointer;
@@ -160,7 +170,7 @@ input[type=date] {
 }
 
 a {
-  color: #00b7ff;
+  color: rgb(77,170,179);    
 }
 
 .inputfield {
@@ -176,7 +186,7 @@ a {
 
 .btn-submit {
   border-radius: 10px;
-  background-color: red;
+  background-color: rgb(77,170,179);
   color: white;
   font-weight: bold;
   padding: 1rem;
@@ -186,7 +196,7 @@ a {
 
 .btn-submit:hover {
   cursor: pointer;
-  background-color: maroon;
+  background-color:  #15f9f9;
 }
 
 .navbar {
@@ -204,16 +214,11 @@ a {
 .room-tile {
   width: 300px;
   min-width: 300px;
-/*   padding: 1rem; */
   border-radius: 10px;
   margin-top: 1.5rem;
   background-color: #ffffff;
   padding: 0.5rem;
 }
-
-/* .room-tile:hover {
-  box-shadow: 10px 10px 15px #d3d3d3;
-} */
 
 .thumbnail-parent {
   border-radius: 10px;
@@ -247,26 +252,33 @@ a {
   font-weight: 900;
 }
 
-/* Wen css */
 header>img {
-  height: 55px;
-  margin-left: 7px
+  height: 60px;
+  margin-left: 12px
 }
 
 nav>a {
+  font-family: 'Quicksand', sans-serif;
   text-decoration: none;
   font-size: 1.6em;
-  color: #55b0b0;
-  font-weight: lighter;
+  color: rgb(77,170,179);
   margin-right: 30px;
 }
 
 header {
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px 12px 20px;
+  background-color:white;
+  width:100%;
+  justify-content:space-between;
+}
+.index-landing{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #search-index {
@@ -278,19 +290,11 @@ header {
   color: white;
   background-image: url(/images/index-bg.jpg);
   background-position: 0 0;
-  height: 100vh;
+  height: 90vh;
+  width:100%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 50px;
   position: relative;
-}
-
-.text-next-logo {
-  font-size: 3em;
-  font-family: 'Pacifico';
-  margin-left: -800px;
-  color: #67c5c5;
-
 }
 
 .btn-submit-search-index {
@@ -299,9 +303,10 @@ header {
   color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 1rem;
+  font-size:0.45em;
   border: none;
   margin-top: 1rem;
-  width:257px;
+  width:407px;
 }
 
 .btn-submit-search-index:hover {
@@ -311,14 +316,25 @@ header {
 
 .form-container-search-index {
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   display: flex;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
-  margin-top:-10%;
-  padding-right: 41%;
-  padding-left: 41%;
+  padding-right: 20%;
+  padding-left: 36%;
   box-sizing: border-box;
+}
+
+.select-search-index{
+  padding: 1rem;
+  padding-left:4rem;
+  padding-right:4rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: none;
+  font-size:0.4em;
 }
 
 /* CSS room detail */
@@ -341,10 +357,8 @@ header {
   font-size: 1rem;
 }
 
-
-
-/* wen css for index-select-rooms-by-city (7 July 19:20) */
 .form-container-search-roomsindex{
+  background-color: rgb(233,238,238);
   width: 100%;
   height: 70vh;
   display: flex;
@@ -374,7 +388,6 @@ header {
 .to-add-room{
   padding-left: 60px;
 }
-/* end wen css for index-select-rooms-by-city (7 July 19:20) */
 
 .room-detail-pic {
   border-radius: 10px;
@@ -387,4 +400,3 @@ header {
   height: 400px;
   object-fit: cover;
 }
-
