@@ -44,10 +44,8 @@ router.post(
                 res.redirect(`/detail-room/${roomFromDB._id}`);
             })
             .catch((err) => {
-                next(err);
+                 next(err);
             });
-
-
     })
 
 
