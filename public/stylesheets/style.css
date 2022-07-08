@@ -252,7 +252,7 @@ a {
   font-weight: 900;
 }
 
-header>img {
+header>a>img {
   height: 60px;
   margin-left: 12px
 }
