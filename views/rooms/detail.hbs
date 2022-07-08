@@ -1,23 +1,36 @@
 <div class="room-container">
+  <div class="room-detail-pic">
   {{#each oneRoomData}}
   {{#each imageUrl}}
-  <div class="room-detail-pic">
+  
     <img class="mySlides" src="{{this}}" alt="room-image">
+   
+  {{/each}}
+  {{/each}}
+   </div>
+  
+  <div class="w3-button">
+  <button class="w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
   </div>
-  {{/each}}
-  {{/each}}
-  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-  <h2 class="roomDetail">{{oneRoomData.title}}</h2>
-  <h3 class="roomDetail">{{oneRoomData.rent}} € /night</h3>
-  <p class="roomDetail">{{oneRoomData.sqr}} sqm</p>
-
-  <p class="roomDetail">{{oneRoomData.formatStartDate}} - {{oneRoomData.formatEndDate}}</p>
-  <h2 class="roomDetail">{{oneRoomData.street}}, {{oneRoomData.postalCode}}, {{oneRoomData.city}}</h2>
-
-  <p class="roomDetail">Description: <br>{{oneRoomData.description}}</p>
-  <p class="roomDetail">Owner: <br>{{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</p>
-
-  <a href="mailto:{{oneRoomData.owner.email}}">Contact landlord</a>
-  <a href="/all-rooms">Back to search rooms</a>
 </div>
+
+<div class="roomDetail">
+  <h1 >{{oneRoomData.title}}</h1>
+  <h2 >{{oneRoomData.rent}} €&nbsp;/night&nbsp;&nbsp;&nbsp;&nbsp;availible from {{oneRoomData.formatStartDate}} to {{oneRoomData.formatEndDate}}</h2>
+  <h3 >{{oneRoomData.sqr}} squaremeter</h3>
+  {{!-- <h3>Availible period {{oneRoomData.formatStartDate}} - {{oneRoomData.formatEndDate}}</h3> --}}
+  <h3>{{oneRoomData.street}}, {{oneRoomData.postalCode}}, {{oneRoomData.city}}</h3>
+  <h3>{{oneRoomData.description}}</h3>
+
+  <div class="contact-owner">
+  <h3 >Owner&nbsp;:&nbsp;&nbsp;{{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}&nbsp;&nbsp;</h3>
+  <h3> <a href="mailto:{{oneRoomData.owner.email}}">Contact landlord</a></h3>
+  </div>
+
+ 
+
+</div>
+
+ <h3><a class="back-link" href="/all-rooms">Back to search rooms</a></h3>
+  
