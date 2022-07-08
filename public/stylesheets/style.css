@@ -327,13 +327,6 @@ header {
   max-width: 50%;
 }
 
-.mySlides {
-  border-radius: 10px;
-/*   padding-bottom: 1rem; */
-  width: 800px;
-  height: 400px;
-}
-
 .titleimg {
   border-radius: 10px;
   object-fit: cover;
@@ -382,3 +375,16 @@ header {
   padding-left: 60px;
 }
 /* end wen css for index-select-rooms-by-city (7 July 19:20) */
+
+.room-detail-pic {
+  border-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.mySlides {
+  border-radius: 10px;
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+
