@@ -48,6 +48,18 @@ form {
   align-items: center;
 }
 
+.profile-pic {
+  border-radius: 99px;
+  padding-bottom: 1rem;
+}
+
+.pb-pic {
+  border-radius: 99px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
 form>* {
   width: 100%;
 }
@@ -117,7 +129,8 @@ input[type=submit] {
 input[type=tel] {
   background-color: #ffffff;
   color: white;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 8px 0;
   border-radius: 10px;
   cursor: pointer;
@@ -126,8 +139,9 @@ input[type=tel] {
 
 input[type=number] {
   background-color: #ffffff;
-  color: white;
-  padding: 1rem;
+  color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 8px 0;
   border-radius: 10px;
   cursor: pointer;
@@ -136,8 +150,9 @@ input[type=number] {
 
 input[type=date] {
   background-color: #ffffff;
-  color: white;
-  padding: 1rem;
+  color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 10px;
   cursor: pointer;
   margin: 8px 0;

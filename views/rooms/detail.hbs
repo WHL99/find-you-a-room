@@ -6,16 +6,16 @@
   {{/each}}
   <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-  <h2 class="roomDetail">Title: {{oneRoomData.title}}</h2>
-  <h2 class="roomDetail">Rent: {{oneRoomData.rent}} € /night</h2>
-  <h2 class="roomDetail">Squaremeter: {{oneRoomData.sqr}}</h2>
+  <h2 class="roomDetail">{{oneRoomData.title}}</h2>
+  <h3 class="roomDetail">{{oneRoomData.rent}} € /night</h3>
+  <p class="roomDetail">{{oneRoomData.sqr}} sqm</p>
 
-  <h2 class="roomDetail">Period: {{oneRoomData.formatStartDate}} - {{oneRoomData.formatEndDate}}</h2>
-  <h2 class="roomDetail">Address: {{oneRoomData.street}}, {{oneRoomData.postalCode}}, {{oneRoomData.city}}</h2>
+  <p class="roomDetail">{{oneRoomData.formatStartDate}} - {{oneRoomData.formatEndDate}}</p>
+  <h2 class="roomDetail">{{oneRoomData.street}}, {{oneRoomData.postalCode}}, {{oneRoomData.city}}</h2>
 
-  <h2 class="roomDetail">Description: {{oneRoomData.description}}</h2>
-  <h2 class="roomDetail">Owner: {{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</h2>
+  <p class="roomDetail">Description: <br>{{oneRoomData.description}}</p>
+  <p class="roomDetail">Owner: <br>{{oneRoomData.owner.firstName}} {{oneRoomData.owner.lastName}}</p>
 
-  <a href="mailto:{{oneRoomData.owner.email}}">Contact the landlord</a>
+  <a href="mailto:{{oneRoomData.owner.email}}">Contact landlord</a>
   <a href="/all-rooms">Back to search rooms</a>
 </div>
