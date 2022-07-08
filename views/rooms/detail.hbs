@@ -1,7 +1,9 @@
 <div class="room-container">
   {{#each oneRoomData}}
   {{#each imageUrl}}
-  <img class="mySlides" src="{{this}}" alt="room-image" width="700">
+  <div class="room-detail-pic">
+    <img class="mySlides" src="{{this}}" alt="room-image" width="700">
+  </div>
   {{/each}}
   {{/each}}
   <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
