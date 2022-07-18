@@ -43,6 +43,7 @@ body {
   padding-bottom: 2rem;
   padding-top: 2rem;
   background-color: rgb(233, 238, 238);
+
 }
 
 form {
@@ -357,12 +358,10 @@ header {
 .select-search-index {
   width: 27vw;
   margin: auto;
-
   padding: 1rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border: 1.5px solid lightgray;
-
   border-radius: 10px;
   box-sizing: border-box;
   /* border: none; */
@@ -432,17 +431,22 @@ header {
 }
 
 .form-container-search-roomsindex {
+  margin-top:4vh;
   width: 100%;
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -10%;
-  padding-right: 20%;
-  padding-left: 0%;
-  margin-top: -25vh;
-  margin-bottom: -32vh;
+  /* margin: auto; */
+  background-color: white;
+  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* border: 1.5px solid lightgray; */
+  border-radius: 10px;
   box-sizing: border-box;
+  font-size: 0.4em;
+  text-align: center;
+  border: none;
 }
 
 .btn-submit-search-roomsindex {
@@ -453,7 +457,7 @@ header {
   padding: 1rem;
   border: none;
   margin-top: 1rem;
-  width: 257px;
+  width: 100%;
 }
 
 .btn-submit-search-roomsindex:hover {
