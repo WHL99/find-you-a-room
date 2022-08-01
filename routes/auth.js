@@ -1,16 +1,13 @@
 const router = require("express").Router();
 const User = require("../models/User");
-const Room = require("../models/Room");
 const bcryptjs = require("bcryptjs");
 
 router.get("/signup", (req, res, next) => {
   res.render("signup");
-  // console.log("signup get test");
 });
 
 router.post("/signup", (req, res, next) => {
   const { email, firstName, lastName, password, checkPassword } = req.body;
-  console.log(req.body)
   if (password.length < 4) {
     res.render("signup", {
       errorMessage: "Your password needs to be min 4 chars",
@@ -39,7 +36,6 @@ router.post("/signup", (req, res, next) => {
         passwordHash: hash,
       })
         .then((createdUser) => {
-          console.log(createdUser);
           res.redirect("/login");
         })
         .catch((err) => next(err));
@@ -47,16 +43,6 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
-// router.get("/all-rooms", (req, res, next) => {
-//   Room.find()
-//       .then((roomsFromDb) => {
-//           console.log(roomsFromDb);
-//           res.render("rooms/index", { roomsFromDb });
-//       })
-//       .catch((err) => {
-//           next(err);
-//       });
-// });
 
 router.get("/login", (req, res) => {
   res.render("login");
@@ -64,8 +50,6 @@ router.get("/login", (req, res) => {
 
 router.post("/login", (req, res, next) => {
   const { email, password } = req.body;
-
-  console.log(email);
 
   if (email === "" || password === "") {
     res.render("login", {
@@ -81,12 +65,10 @@ router.post("/login", (req, res, next) => {
           errorMessage: "Email is not registered. Try with other email.",
         });
         return;
-        //first time login, add profile
       } else if (!user.city && bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
         res.redirect("/add-profile");
       }
-      //if the profile is added, go to index
       else if (user.city && bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
         res.redirect("/all-rooms");

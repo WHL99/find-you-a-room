@@ -17,8 +17,6 @@ router.post(
   (req, res, next) => {
     const { gender, phoneNumber, city, birthday } = req.body;
     const imageUrl = req.file.path;
-    console.log(req.body);
-    //console.log(req.session.currentUser)
     const userId = req.session.currentUser._id;
     User.findByIdAndUpdate(userId, {
       gender,
@@ -50,47 +48,40 @@ router.get("/profile", (req, res, next) => {
 router.get("/room-search", (req, res, next) => {
   Room.find({ city: req.query.searchByCity })
     .then((roomsFromDB) => {
-      // const theDate = roomsFromDB.map(roomsFromDB.startDate => file.path)
-      //console.log(roomsFromDB)
       const formatDateRooms = roomsFromDB.map(function (room) {
         room.formatStartDate = room.startDate.toDateString().slice(4)
         room.formatEndDate = room.endDate.toDateString().slice(4)
-       // console.log(room.formatEndDate)
         return room
       })
-        if (req.query.searchByCity === "") {
-          res.redirect("/all-rooms");
-        }
-        res.render("rooms/select-rooms-by-city", { seeRoomsByCity: formatDateRooms });
-      })
-        .catch((err) =>
-          console.log("The error while searching artists occurred: ", err)
-        );
-    });
+      if (req.query.searchByCity === "") {
+        res.redirect("/all-rooms");
+      }
+      res.render("rooms/select-rooms-by-city", { seeRoomsByCity: formatDateRooms });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
-    router.get("/room-search/:id", (req, res, next) => {
-      const roomId = req.params.id;
-      console.log(req.params.id);
-  
-      Room.findById(roomId)
-          .then((roomsFromDB) => {
-              res.render("rooms/detail", { oneRoomData: roomsFromDB });
-              
-          })
-          .catch((err) => {
-              next(err);
-          });
-  });
+router.get("/room-search/:id", (req, res, next) => {
+  const roomId = req.params.id;
+
+  Room.findById(roomId)
+    .then((roomsFromDB) => {
+      res.render("rooms/detail", { oneRoomData: roomsFromDB });
+
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
 
 router.get("/room-search-rooms-index", (req, res, next) => {
   Room.find({ city: req.query.searchByCity })
     .then((roomsFromDB) => {
-      // const theDate = roomsFromDB.map(roomsFromDB.startDate => file.path)
-      //console.log(roomsFromDB)
       const formatDateRooms = roomsFromDB.map(function (room) {
         room.formatStartDate = room.startDate.toDateString().slice(4)
         room.formatEndDate = room.endDate.toDateString().slice(4)
-       // console.log(room.formatEndDate)
         return room
       })
       if (req.query.searchByCity === "") {
@@ -98,14 +89,14 @@ router.get("/room-search-rooms-index", (req, res, next) => {
       }
       res.render("rooms/select-rooms-by-city", { seeRoomsByCity: formatDateRooms });
 
-       
-        res.render("rooms/select-rooms-by-city", { seeRoomsByCity: formatDateRooms });
-      })
-        .catch((err) =>
-          console.log("The error while searching artists occurred: ", err)
-        );
-    });
 
-  module.exports = router;
+      res.render("rooms/select-rooms-by-city", { seeRoomsByCity: formatDateRooms });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+module.exports = router;
 
 

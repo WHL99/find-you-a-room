@@ -1,8 +1,6 @@
 body {
   font: 14px 'Quicksand', sans-serif;
   margin: 0;
-  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* background-color: #f3f3f3; */
   background-color: rgb(233, 238, 238);
 }
 
@@ -15,7 +13,6 @@ body {
   width: 35%;
   margin: 0 auto;
   background-color: rgba(77, 170, 179, 0.2);
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,9 +24,6 @@ body {
   width: 35%;
   margin: 0 auto;
   background-color: rgba(77, 170, 179, 0.2);
-  /* height: 100vh; */
-  /* height: 90vh; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,11 +158,9 @@ input[type=tel] {
   color: black;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
   display: block;
   padding: 1rem;
   box-sizing: border-box;
-
   margin: 8px 0;
   border-radius: 10px;
   cursor: pointer;
@@ -364,15 +356,12 @@ header {
   border: 1.5px solid lightgray;
   border-radius: 10px;
   box-sizing: border-box;
-  /* border: none; */
   font-size: 0.4em;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-/* CSS room detail */
 
 .roomDetail {
   line-height: 20px;
@@ -382,8 +371,6 @@ header {
   padding-right: 420px;
   padding-bottom: 55px;
 }
-
-
 
 .room-container {
   padding-top: 2rem;
@@ -404,7 +391,6 @@ header {
   margin-top: -25px;
 }
 
-
 .contact-owner {
   display: flex;
   justify-content: flex-start;
@@ -413,7 +399,6 @@ header {
 .back-link {
   padding-bottom: 60px;
   margin-left: 620px;
-
 }
 
 .titleimg {
@@ -436,12 +421,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: auto; */
   background-color: white;
   padding: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* border: 1.5px solid lightgray; */
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 0.4em;
