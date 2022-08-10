@@ -1,7 +1,7 @@
 <p align="right"><img src="https://user-images.githubusercontent.com/104759740/183899455-52e9f4ca-40b8-4115-a375-42d71bec3cae.png" alt="findYouARoomLogo" height="70" /></p>
 
 # My Mission
-In my current city, Berlin as an example, it is very difficult to find accommodation, either for long-term rentals or for short-term visits to the city. At the same time, many foreigners living in this city return to their home countries for a short period of time, leaving the city with a lot of short-term vacancies. This seems to me to be a waste of resources.<br>I created this online service platform to connect people who want to rent out their rooms with people who are looking for accommodations in specific cities, with the goal of achieving a sharing economy.
+In my current city, Berlin as an example, it is very difficult to find accommodation, either for long-term rentals or for short-term visits to the city. At the same time, many foreigners living in this city return to their home countries for a short period of time, leaving the city with a lot of short-term vacancies. This seems to me to be a waste of resources.<br>I created this online service platform to connect people who want to rent out their rooms with people who are looking for accommodations in specific cities, with the goal of achieving a sharing economy.<br>It should be mentioned that in this project I cooperated with a partner - Alexander.
 <p align="center"><img width="900" alt="index" src="https://user-images.githubusercontent.com/104759740/183899332-9973dc37-1643-43e9-98cb-8df588afec72.png"></p>
 
 ## Setup
@@ -12,7 +12,7 @@ In my current city, Berlin as an example, it is very difficult to find accommoda
   ```bash
   cd find-you-a-room
   ```
-  Install all npm packages and run it: 
+  Install all npm package and run it: 
   ```bash
   npm install
   npm run dev
@@ -40,10 +40,15 @@ In my current city, Berlin as an example, it is very difficult to find accommoda
 
 ## Stack 
 
-- Frontend: 
+- Frontend: Node.js
 - Backend: Express and Node.js
 - Database: MongoDB 
 - Deployed on Heroku 
+
+## Contributors
+
+- [Wen-Hsuan Liao](https://github.com/WHL99)
+- [Alexander Farmakis](https://github.com/alex-fmks)
 
 ## 
 Now you have it&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;🏘️  <br>
