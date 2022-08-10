@@ -40,7 +40,7 @@ In my current city, Berlin as an example, it is very difficult to find accommoda
 
 ## Stack 
 
-- Frontend: Node.js
+- Frontend: Server-side rendering
 - Backend: Express and Node.js
 - Database: MongoDB 
 - Deployed on Heroku 
