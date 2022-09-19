@@ -416,7 +416,7 @@ header {
 }
 
 .form-container-search-roomsindex {
-  margin-top:4vh;
+  margin-top: 4vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -464,6 +464,7 @@ header {
   object-fit: cover;
 }
 
-.select-search-roomsindex{
-  border:none;
+.select-search-roomsindex {
+  width: 20vw;
+  border: none;
 }
