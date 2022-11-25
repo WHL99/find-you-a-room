@@ -53,4 +53,3 @@ In my current city, Berlin as an example, it is very difficult to find accommoda
 ## 
 Now you have it&nbsp;&nbsp;&nbsp;✈️&nbsp;&nbsp;&nbsp;🏘️  <br>
 Thank you for reading and happy coding &nbsp;💚
-Update README.md
