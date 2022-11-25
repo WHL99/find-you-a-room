@@ -43,7 +43,7 @@ In my current city, Berlin as an example, it is very difficult to find accommoda
 - Frontend: Server-side rendering
 - Backend: Express and Node.js
 - Database: MongoDB 
-- Deployed on Onrender 
+- Deployed on Render 
 
 ## Contributors
 
